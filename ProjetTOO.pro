@@ -26,3 +26,4 @@ HEADERS += class/videogame.h \
     class/ebook.h \
     class/comic.h \
     class/book.h
+OTHER_FILES += bd/bibli.bd
