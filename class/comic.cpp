@@ -14,7 +14,7 @@ Comic::~Comic()
 
 std::string Comic::getType()
 {
-    return "Bande Dessiné";
+    return "Bande Dessinée";
 }
 
 Comic& Comic::operator =(const Comic& bd)

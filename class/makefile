@@ -1,7 +1,7 @@
 #Macros
 cc = g++
 w = -Wall
-objet = main.o docs.o read.o multimedia.o film.o music.o videogame.o ebook.o book.o comic.o
+objet = main.o docs.o read.o multimedia.o film.o music.o videogame.o ebook.o book.o comic.o library.o
 exe = test
 #Regles princial
 all: $(exe)

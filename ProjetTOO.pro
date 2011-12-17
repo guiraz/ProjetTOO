@@ -16,7 +16,8 @@ SOURCES += main.cpp \
     class/read.cpp \
     class/ebook.cpp \
     class/comic.cpp \
-    class/book.cpp
+    class/book.cpp \
+    class/library.cpp
 HEADERS += class/videogame.h \
     class/music.h \
     class/multimedia.h \
@@ -25,4 +26,5 @@ HEADERS += class/videogame.h \
     class/read.h \
     class/ebook.h \
     class/comic.h \
-    class/book.h
+    class/book.h \
+    class/library.h
