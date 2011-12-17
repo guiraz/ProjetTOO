@@ -6,7 +6,7 @@ Film::Film() : Multimedia(), _director("NC")
 {
 }
 
-Film::Film(const std::string &director ,const std::string &mount,const std::string &name,const std::string &ref,const int &year): Multimedia(mount,name,ref,year)
+Film::Film(const std::string &director ,const std::string &mount,const std::string &name,const std::string &ref,const int &year): Docs(name, ref, year), Multimedia(mount,name,ref,year)
 {
     _director=director;
 }

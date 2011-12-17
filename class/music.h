@@ -17,8 +17,8 @@ public:
 
     //ACCESS
     virtual std::string getType();
-    void setBand(const std::string&);
-    std::string getBand() const;
+    virtual void setBand(const std::string&);
+    virtual std::string getBand() const;
 
     //OPERATOR
     virtual Music& operator=(const Music&);

@@ -4,7 +4,7 @@ VideoGame::VideoGame() : Multimedia(), _console("NC")
 {
 }
 
-VideoGame::VideoGame(const std::string &console ,const std::string &mount,const std::string &name,const std::string &ref,const int &year):Multimedia(mount,name,ref,year)
+VideoGame::VideoGame(const std::string &console ,const std::string &mount,const std::string &name,const std::string &ref,const int &year): Docs(name, ref, year), Multimedia(mount,name,ref,year)
 {
     _console=console;
 }

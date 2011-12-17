@@ -9,6 +9,7 @@ class Comic : public Read
 public:
     //CONSTRUCT
     Comic();
+    Comic(const std::string& autor, const std::string& name, const std::string& ref, const int& year);
     virtual ~Comic();
 
     //ACCESS

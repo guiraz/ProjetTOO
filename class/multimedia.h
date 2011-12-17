@@ -14,8 +14,8 @@ public:
     virtual ~Multimedia();
 
     //ACCESS
-    std::string getMount() const;
-    void setMount(const std::string&);
+    virtual std::string getMount() const;
+    virtual void setMount(const std::string&);
 
     //PURE VIRTUAL FUNCTIONS
     virtual std::string getType()=0;

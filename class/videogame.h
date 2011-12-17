@@ -17,8 +17,8 @@ public:
 
     //ACCESS
     virtual std::string getType();
-    void setConsole(const std::string&);
-    std::string getConsole() const;
+    virtual void setConsole(const std::string&);
+    virtual std::string getConsole() const;
 
     //OPERATOR
     virtual VideoGame& operator=(const VideoGame&);

@@ -45,6 +45,59 @@ int Docs::getYear() const
     return _yearReleased;
 }
 
+std::string Docs::getAutor() const
+{
+   return "";
+}
+void Docs::setAutor(const std::string&)
+{
+}
+      
+std::string Docs::getMount() const
+{
+   return "";
+}
+
+void Docs::setMount(const std::string&)
+{
+}
+
+void Docs::setStyle(const std::string&)
+{
+}
+
+std::string Docs::getStyle() const
+{
+   return "";
+}
+
+std::string Docs::getDirector() const
+{
+   return "";
+}
+
+void Docs::setDirector(const std::string&)
+{
+}
+
+void Docs::setBand(const std::string&)
+{
+}
+
+std::string Docs::getBand() const
+{
+   return "";
+}
+
+void Docs::setConsole(const std::string&)
+{
+}
+
+std::string Docs::getConsole() const
+{
+   return "";
+}
+
 Docs& Docs::operator=(const Docs& doc)
 {
     _reference=doc.getRef();

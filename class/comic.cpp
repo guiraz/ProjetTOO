@@ -4,6 +4,10 @@ Comic::Comic() : Read()
 {
 }
 
+Comic::Comic(const std::string& autor, const std::string& name, const std::string& ref, const int& year) : Docs(name, ref, year), Read(autor, name, ref, year)
+{
+}
+
 Comic::~Comic()
 {
 }

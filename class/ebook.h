@@ -10,6 +10,7 @@ class Ebook : virtual public Docs, public Read, public Multimedia
 public:
     //CONSTRUCT
     Ebook();
+    Ebook(const std::string& autor, const std::string& mount, const std::string& name, const std::string& ref, const int& year);
     virtual ~Ebook();
 
     //ACCESS

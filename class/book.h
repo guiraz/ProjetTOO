@@ -16,8 +16,8 @@ public:
 
     //ACCESS
     virtual std::string getType();
-    void setStyle(const std::string&);
-    std::string getStyle() const;
+    virtual void setStyle(const std::string&);
+    virtual std::string getStyle() const;
 
     //OPERATOR
     virtual Book& operator=(const Book&);

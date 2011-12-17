@@ -22,6 +22,32 @@ public:
     void setRef(const std::string&);
     void setYear(const int&);
     int getYear() const;
+    
+    //VIRTUAL FUNCTIONS FOR DAUGHTERS
+    
+      //Read
+      virtual std::string getAutor() const;
+      virtual void setAutor(const std::string&);
+      
+      //Multimedia
+      virtual std::string getMount() const;
+      virtual void setMount(const std::string&);
+      
+      //Book
+      virtual void setStyle(const std::string&);
+      virtual std::string getStyle() const;
+      
+      //Film
+      virtual std::string getDirector() const;
+      virtual void setDirector(const std::string&);
+      
+      //Music
+      virtual void setBand(const std::string&);
+      virtual std::string getBand() const;
+    
+      //VideoGames
+      virtual void setConsole(const std::string&);
+      virtual std::string getConsole() const;
 
     //PURE VIRTUAL FUNCTIONS
     virtual std::string getType()=0;

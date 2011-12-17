@@ -4,6 +4,10 @@ Ebook::Ebook() : Read(), Multimedia()
 {
 }
 
+Ebook::Ebook(const std::string& autor, const std::string& mount, const std::string& name, const std::string& ref, const int& year) : Docs(name, ref, year), Read(autor, name, ref, year), Multimedia(mount, name, ref, year)
+{
+}
+
 Ebook::~Ebook()
 {
 }

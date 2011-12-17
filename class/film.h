@@ -17,8 +17,8 @@ public:
 
     //ACCESS
     virtual std::string getType();
-    std::string getDirector() const;
-    void setDirector(const std::string&);
+    virtual std::string getDirector() const;
+    virtual void setDirector(const std::string&);
 
     //OPERATOR
     virtual Film& operator=(const Film&);

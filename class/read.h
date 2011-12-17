@@ -15,8 +15,8 @@ public:
     virtual ~Read();
 
     //ACCESS
-    std::string getAutor() const;
-    void setAutor(const std::string&);
+    virtual std::string getAutor() const;
+    virtual void setAutor(const std::string&);
 
     //PURE VIRTUAL FUNCTIONS
     virtual std::string getType() =0;

@@ -4,7 +4,7 @@ Book::Book() : Read(), _style("NC")
 {
 }
 
-Book::Book(const std::string &style,const std::string &autor,const std::string &name,const std::string &ref,const int &year) : Read(autor,name,ref,year)
+Book::Book(const std::string &style,const std::string &autor,const std::string &name,const std::string &ref,const int &year) : Docs(name, ref, year), Read(autor,name,ref,year)
 {
     _style=style;
 }
