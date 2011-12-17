@@ -28,3 +28,4 @@ HEADERS += class/videogame.h \
     class/comic.h \
     class/book.h \
     class/library.h
++OTHER_FILES += bd/bibli.bd
