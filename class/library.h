@@ -2,6 +2,7 @@
 #define LIBRARY_H
 #include<vector>
 #include<iostream>
+#include<fstream>
 #include "docs.h"
 
 class Library
@@ -30,6 +31,9 @@ public:
     //SORTING
     void invert(const int&, const int&);
     void sortByType();
+
+    //HTML EXPORT
+    void exportLib2Html();
 
     //TOOLS
     unsigned int intTheType(const int&);

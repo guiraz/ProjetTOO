@@ -45,5 +45,6 @@ int main()
    lib.sortByType();
    cout<<endl<<endl;
    lib.displayAll();
+   lib.exportLib2Html();
    lib.erase();
 }

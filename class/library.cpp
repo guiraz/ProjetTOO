@@ -113,6 +113,111 @@ void Library::sortByType()
     }
 }
 
+void Library::exportLib2Html()
+{
+
+    std::ofstream css("../HTML/style.css");
+    if(css)
+    {
+        css<<"table"<<std::endl;
+        css<<"{"<<std::endl;
+        css<<"    width: 99%;"<<std::endl;
+        css<<"    border-collapse: collapse;"<<std::endl;
+        css<<"}"<<std::endl;
+        css<<"td"<<std::endl;
+        css<<"{"<<std::endl;
+        css<<"    text-align: center;"<<std::endl;
+        css<<"    border: 1px solid black;"<<std::endl;
+        css<<"}"<<std::endl;
+        css.close();
+    }
+
+    std::ofstream html("../HTML/index.html");
+    if(html)
+    {
+        html<<"<!DOCTYPE html>"<<std::endl;
+        html<<"<head>"<<std::endl;
+        html<<"   <meta charset=\"utf-8\" />"<<std::endl;
+        html<<"   <link rel=\"stylesheet\" href=\"style.css\" />"<<std::endl;
+        html<<"   <title>|-> Exportation bibliothéque multimédia <-|</title>"<<std::endl;
+        html<<"</head>"<<std::endl;
+        html<<"<body>"<<std::endl;
+        html<<"<table>"<<std::endl;
+        html<<"   <tr>"<<std::endl;
+        html<<"      <td><a href=\"#film\">Film</a>"<<std::endl;
+        html<<"      </td>"<<std::endl;
+        html<<"      <td><a href=\"#book\">Livre</a>"<<std::endl;
+        html<<"      </td>"<<std::endl;
+        html<<"      <td><a href=\"#music\">Musique</a>"<<std::endl;
+        html<<"      </td>"<<std::endl;
+        html<<"      <td><a href=\"#vg\">Jeux Video</a>"<<std::endl;
+        html<<"      </td>"<<std::endl;
+        html<<"      <td><a href=\"#comic\">Bande Dessinée</a>"<<std::endl;
+        html<<"      </td>"<<std::endl;
+        html<<"      <td><a href=\"#ebook\">Livre Numérique</a>"<<std::endl;
+        html<<"      </td>"<<std::endl;
+        html<<"   </tr>"<<std::endl;
+        html<<"</table>"<<std::endl;
+
+        html<<"<h1 id=\"film\">Films</h1>"<<std::endl;
+        for(unsigned int i=0; i<_docsList.size(); i++)
+        {
+            if(intTheType(i)==2)
+            {
+                html<<"<b>"<<_docsList[i]->getName()<<"</b> de "<<_docsList[i]->getDirector()<<" tourné en "<<_docsList[i]->getYear()<<" sur "<<_docsList[i]->getMount()<<". (REF: "<<_docsList[i]->getRef()<<")<br />"<<std::endl;
+            }
+        }
+
+        html<<"<h1 id=\"book\">Livres</h1>"<<std::endl;
+        for(unsigned int i=0; i<_docsList.size(); i++)
+        {
+            if(intTheType(i)==4)
+            {
+                html<<"<b>"<<_docsList[i]->getName()<<"</b> est un(e) "<<_docsList[i]->getStyle()<<" de "<<_docsList[i]->getAutor()<<" édité en "<<_docsList[i]->getYear()<<". (REF: "<<_docsList[i]->getRef()<<")<br />"<<std::endl;
+            }
+        }
+
+        html<<"<h1 id=\"music\">Musique</h1>"<<std::endl;
+        for(unsigned int i=0; i<_docsList.size(); i++)
+        {
+            if(intTheType(i)==6)
+            {
+                html<<"<b>"<<_docsList[i]->getName()<<"</b> de "<<_docsList[i]->getBand()<<" sorti en "<<_docsList[i]->getYear()<<" sur "<<_docsList[i]->getMount()<<". (REF: "<<_docsList[i]->getRef()<<")<br />"<<std::endl;
+            }
+        }
+
+        html<<" <h1 id=\"vg\">Jeux Video</h1>"<<std::endl;
+        for(unsigned int i=0; i<_docsList.size(); i++)
+        {
+            if(intTheType(i)==3)
+            {
+                html<<"<b>"<<_docsList[i]->getName()<<"</b> sorti en "<<_docsList[i]->getYear()<<" sur "<<_docsList[i]->getConsole()<<" en "<<_docsList[i]->getMount()<<". (REF: "<<_docsList[i]->getRef()<<")<br />"<<std::endl;
+            }
+        }
+
+        html<<"<h1 id=\"comic\">Bande dessinée</h1>"<<std::endl;
+        for(unsigned int i=0; i<_docsList.size(); i++)
+        {
+            if(intTheType(i)==1)
+            {
+                html<<"<b>"<<_docsList[i]->getName()<<"</b> de "<<_docsList[i]->getAutor()<<" édité en "<<_docsList[i]->getYear()<<". (REF: "<<_docsList[i]->getRef()<<")<br />"<<std::endl;
+            }
+        }
+
+        html<<"<h1 id=\"ebook\">Livres Numériques</h1>"<<std::endl;
+        for(unsigned int i=0; i<_docsList.size(); i++)
+        {
+            if(intTheType(i)==5)
+            {
+                html<<"<b>"<<_docsList[i]->getName()<<"</b> de "<<_docsList[i]->getAutor()<<" diponible depuis "<<_docsList[i]->getYear()<<" en "<<_docsList[i]->getMount()<<". (REF: "<<_docsList[i]->getRef()<<")<br />"<<std::endl;
+            }
+        }
+        html<<"</body>"<<std::endl;
+        html<<"</html>"<<std::endl;
+        html.close();
+    }
+}
+
 unsigned int Library::intTheType(const int & position)
 {
     if(_docsList[position]->getType()=="Film")
