@@ -28,6 +28,17 @@ void Library::pushElement(Docs* element)
     _docsList.push_back(element);
 }
 
+void Library::popElement(const int & position)
+{
+    for(unsigned int i=position; i<_docsList.size()-1; i++)
+    {
+        invert(i, i+1);
+    }
+    _docsList[_docsList.size()-1]=NULL;
+    delete _docsList[_docsList.size()-1];
+    _docsList.pop_back();
+}
+
 void Library::displayAll()
 {
     for(unsigned int i=0; i<_docsList.size(); i++)

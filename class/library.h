@@ -18,6 +18,7 @@ public:
     //ACCESS
     Docs* getElement(const int&);
     void pushElement(Docs*);
+    void popElement(const int&);
 
     //DISPLAY
     void displayAll();

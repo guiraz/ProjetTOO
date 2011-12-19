@@ -52,5 +52,8 @@ int main()
    cout<<endl<<endl;
    lib.displayAll();
    lib.exportLib2Html();
+   lib.popElement(2);
+   cout<<endl<<endl;
+   lib.displayAll();
    lib.erase();
 }
