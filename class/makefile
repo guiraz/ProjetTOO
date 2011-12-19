@@ -15,6 +15,11 @@ clean :
 	rm *.o
 mrpropre : clean
 	rm $(exe)
+	
+mrpropre2 : clean
+	rm $(exe)
+	rm ../HTML/index.html
+	rm ../HTML/style.css
 
 # $@ nom cible
 # $< nom 1ere dependance

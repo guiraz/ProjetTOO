@@ -113,6 +113,42 @@ void Library::sortByType()
     }
 }
 
+void Library::sortByName()
+{
+
+    for(unsigned int i=0; i<_docsList.size()-1; i++)
+    {
+        int min=i;
+        for(unsigned int j=i+1; j<_docsList.size(); j++)
+        {
+            if(_docsList[min]->getName().compare(_docsList[j]->getName())>0)
+            {
+                min=j;
+            }
+        }
+        invert(i, min);
+    }
+
+}
+
+void Library::sortByYear()
+{
+
+    for(unsigned int i=0; i<_docsList.size()-1; i++)
+    {
+        int min=i;
+        for(unsigned int j=i+1; j<_docsList.size(); j++)
+        {
+            if(_docsList[min]->getYear()>_docsList[j]->getYear())
+            {
+                min=j;
+            }
+        }
+        invert(i, min);
+    }
+
+}
+
 void Library::exportLib2Html()
 {
 
@@ -126,6 +162,7 @@ void Library::exportLib2Html()
         css<<"}"<<std::endl;
         css<<"td"<<std::endl;
         css<<"{"<<std::endl;
+        css<<"    width: 16%;"<<std::endl;
         css<<"    text-align: center;"<<std::endl;
         css<<"    border: 1px solid black;"<<std::endl;
         css<<"}"<<std::endl;

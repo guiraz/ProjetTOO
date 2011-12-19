@@ -31,6 +31,8 @@ public:
     //SORTING
     void invert(const int&, const int&);
     void sortByType();
+    void sortByName();
+    void sortByYear();
 
     //HTML EXPORT
     void exportLib2Html();

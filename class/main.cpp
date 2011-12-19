@@ -42,6 +42,12 @@ int main()
    
    
    lib.displayAll();
+   lib.sortByYear();
+   cout<<endl<<endl;
+   lib.displayAll();
+   lib.sortByName();
+   cout<<endl<<endl;
+   lib.displayAll();
    lib.sortByType();
    cout<<endl<<endl;
    lib.displayAll();
