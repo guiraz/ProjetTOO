@@ -2,7 +2,8 @@
 # Project created by QtCreator 2011-12-13T22:34:54
 # -------------------------------------------------
 QT += core
-QT -= gui
+QT += gui
+QT += sql
 TARGET = ProjetTOO
 CONFIG += console
 CONFIG -= app_bundle

@@ -3,7 +3,18 @@
 #include<vector>
 #include<iostream>
 #include<fstream>
+/*#include <QtSql>
+#include <QFile>
+#include<QString>*/
 #include "docs.h"
+#include "read.h"
+#include "multimedia.h"
+#include "film.h"
+#include "music.h"
+#include "videogame.h"
+#include "ebook.h"
+#include "book.h"
+#include "comic.h"
 
 class Library
 {
@@ -37,6 +48,12 @@ public:
 
     //HTML EXPORT
     void exportLib2Html();
+
+    //DATABASE
+   /* bool connectDB();
+    void importDB();
+    void exportDB();
+    void clearDB();*/
 
     //TOOLS
     unsigned int intTheType(const int&);

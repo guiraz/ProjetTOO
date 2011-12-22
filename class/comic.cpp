@@ -12,7 +12,7 @@ Comic::~Comic()
 {
 }
 
-std::string Comic::getType()
+std::string Comic::getType() const
 {
     return "Bande Dessinée";
 }

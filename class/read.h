@@ -19,7 +19,7 @@ public:
     virtual void setAutor(const std::string&);
 
     //PURE VIRTUAL FUNCTIONS
-    virtual std::string getType() =0;
+    virtual std::string getType() const;
 
     //OPERATOR
     virtual Read& operator=(const Read&);

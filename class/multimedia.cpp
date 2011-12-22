@@ -13,6 +13,11 @@ Multimedia::~Multimedia()
 {
 }
 
+std::string Multimedia::getType() const
+{
+    return"";
+}
+
 std::string Multimedia::getMount() const
 {
     return _mount;

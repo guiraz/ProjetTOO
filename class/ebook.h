@@ -14,7 +14,7 @@ public:
     virtual ~Ebook();
 
     //ACCESS
-    virtual std::string getType();
+    virtual std::string getType() const;
 
     //OPERATOR
     virtual Ebook& operator=(const Ebook&);

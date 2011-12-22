@@ -15,7 +15,7 @@ public:
     virtual ~Book();
 
     //ACCESS
-    virtual std::string getType();
+    virtual std::string getType() const;
     virtual void setStyle(const std::string&);
     virtual std::string getStyle() const;
 

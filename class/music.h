@@ -16,7 +16,7 @@ public:
     virtual ~Music();
 
     //ACCESS
-    virtual std::string getType();
+    virtual std::string getType() const;
     virtual void setBand(const std::string&);
     virtual std::string getBand() const;
 

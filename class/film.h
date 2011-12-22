@@ -16,7 +16,7 @@ public:
     virtual ~Film();
 
     //ACCESS
-    virtual std::string getType();
+    virtual std::string getType() const;
     virtual std::string getDirector() const;
     virtual void setDirector(const std::string&);
 

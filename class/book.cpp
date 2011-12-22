@@ -13,7 +13,7 @@ Book::~Book()
 {
 }
 
-std::string Book::getType()
+std::string Book::getType() const
 {
     return "Livre";
 }

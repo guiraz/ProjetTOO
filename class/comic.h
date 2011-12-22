@@ -13,7 +13,7 @@ public:
     virtual ~Comic();
 
     //ACCESS
-    virtual std::string getType();
+    virtual std::string getType() const;
 
     //OPERATOR
     virtual Comic& operator=(const Comic&);

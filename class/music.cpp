@@ -14,7 +14,7 @@ Music::~Music()
 }
 
 //ACCESS
-std::string Music::getType()
+std::string Music::getType() const
 {
     return "Musique";
 }

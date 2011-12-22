@@ -17,7 +17,7 @@ Film::~Film()
 
 
 //ACCESS*******************************************************
-std::string Film::getType()
+std::string Film::getType() const
 {
     return "Film";
 }

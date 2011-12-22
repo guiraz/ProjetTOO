@@ -15,7 +15,7 @@ VideoGame::~VideoGame()
 
 //ACCESS
 
-std::string VideoGame::getType()
+std::string VideoGame::getType() const
 {
     return "Jeux Video";
 }

@@ -16,9 +16,7 @@ public:
     //ACCESS
     virtual std::string getMount() const;
     virtual void setMount(const std::string&);
-
-    //PURE VIRTUAL FUNCTIONS
-    virtual std::string getType()=0;
+    virtual std::string getType() const;
 
     //OPERATOR
     virtual Multimedia& operator=(const Multimedia&);

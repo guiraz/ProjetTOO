@@ -98,6 +98,11 @@ std::string Docs::getConsole() const
    return "";
 }
 
+std::string Docs::getType() const
+{
+    return"";
+}
+
 Docs& Docs::operator=(const Docs& doc)
 {
     _reference=doc.getRef();

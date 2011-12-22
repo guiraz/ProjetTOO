@@ -16,7 +16,7 @@ public:
     virtual ~VideoGame();
 
     //ACCESS
-    virtual std::string getType();
+    virtual std::string getType() const;
     virtual void setConsole(const std::string&);
     virtual std::string getConsole() const;
 

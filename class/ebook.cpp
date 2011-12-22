@@ -12,7 +12,7 @@ Ebook::~Ebook()
 {
 }
 
-std::string Ebook::getType()
+std::string Ebook::getType() const
 {
     return "Livre Numérique";
 }

@@ -49,8 +49,8 @@ public:
       virtual void setConsole(const std::string&);
       virtual std::string getConsole() const;
 
-    //PURE VIRTUAL FUNCTIONS
-    virtual std::string getType()=0;
+      //ALL
+      virtual std::string getType() const;
 
     //OPERATOR
     virtual Docs& operator=(const Docs&);

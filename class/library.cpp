@@ -43,7 +43,6 @@ void Library::displayAll()
 {
     for(unsigned int i=0; i<_docsList.size(); i++)
     {
-
         switch(intTheType(i))
         {
         case 2:
@@ -72,32 +71,32 @@ void Library::displayAll()
 
 void Library::displayFilm(const int& position)
 {
-    std::cout<<_docsList[position]->getRef()<<" "<<_docsList[position]->getName()<<" "<<_docsList[position]->getYear()<<" "<<_docsList[position]->getMount()<<" "<<_docsList[position]->getDirector()<<std::endl;
+    std::cout<<getElement(position)->getRef()<<" "<<getElement(position)->getName()<<" "<<getElement(position)->getYear()<<" "<<getElement(position)->getMount()<<" "<<getElement(position)->getDirector()<<std::endl;
 }
 
 void Library::displayMusic(const int& position)
 {
-    std::cout<<_docsList[position]->getRef()<<" "<<_docsList[position]->getName()<<" "<<_docsList[position]->getYear()<<" "<<_docsList[position]->getMount()<<" "<<_docsList[position]->getBand()<<std::endl;
+    std::cout<<getElement(position)->getRef()<<" "<<getElement(position)->getName()<<" "<<getElement(position)->getYear()<<" "<<getElement(position)->getMount()<<" "<<getElement(position)->getBand()<<std::endl;
 }
 
 void Library::displayVideoGame(const int& position)
 {
-    std::cout<<_docsList[position]->getRef()<<" "<<_docsList[position]->getName()<<" "<<_docsList[position]->getYear()<<" "<<_docsList[position]->getMount()<<" "<<_docsList[position]->getConsole()<<std::endl;
+    std::cout<<getElement(position)->getRef()<<" "<<getElement(position)->getName()<<" "<<getElement(position)->getYear()<<" "<<getElement(position)->getMount()<<" "<<getElement(position)->getConsole()<<std::endl;
 }
 
 void Library::displayEbook(const int& position)
 {
-    std::cout<<_docsList[position]->getRef()<<" "<<_docsList[position]->getName()<<" "<<_docsList[position]->getYear()<<" "<<_docsList[position]->getAutor()<<" "<<_docsList[position]->getMount()<<std::endl;
+    std::cout<<getElement(position)->getRef()<<" "<<getElement(position)->getName()<<" "<<getElement(position)->getYear()<<" "<<getElement(position)->getAutor()<<" "<<getElement(position)->getMount()<<std::endl;
 }
 
 void Library::displayComic(const int& position)
 {
-    std::cout<<_docsList[position]->getRef()<<" "<<_docsList[position]->getName()<<" "<<_docsList[position]->getYear()<<" "<<_docsList[position]->getAutor()<<std::endl;
+    std::cout<<getElement(position)->getRef()<<" "<<getElement(position)->getName()<<" "<<getElement(position)->getYear()<<" "<<getElement(position)->getAutor()<<std::endl;
 }
 
 void Library::displayBook(const int& position)
 {
-    std::cout<<_docsList[position]->getRef()<<" "<<_docsList[position]->getName()<<" "<<_docsList[position]->getYear()<<" "<<_docsList[position]->getAutor()<<" "<<_docsList[position]->getStyle()<<std::endl;
+    std::cout<<getElement(position)->getRef()<<" "<<getElement(position)->getName()<<" "<<getElement(position)->getYear()<<" "<<getElement(position)->getAutor()<<" "<<getElement(position)->getStyle()<<std::endl;
 }
 
 void Library::invert(const int& pos1, const int& pos2)
@@ -265,40 +264,308 @@ void Library::exportLib2Html()
         html.close();
     }
 }
+/*
+void Library::importDB()
+{
+    QSqlQuery importDBQuery;
 
+    importDBQuery.exec("select * from FILM;");
+    if (importDBQuery.first())
+    {
+        do
+        {
+            const std::string ref=importDBQuery.value(0).toString().toStdString();
+            const std::string name=importDBQuery.value(1).toString().toStdString();
+            const std::string director=importDBQuery.value(2).toString().toStdString();
+            const int year=importDBQuery.value(3).toInt();
+            const std::string mount=importDBQuery.value(4).toString().toStdString();
+
+            pushElement(new Film(director, mount, name, ref, year));
+
+        }while(importDBQuery.next());
+    }
+    importDBQuery.clear();
+
+    importDBQuery.exec("select * from MUSIC;");
+    if (importDBQuery.first())
+    {
+        do
+        {
+            const std::string ref=importDBQuery.value(0).toString().toStdString();
+            const std::string name=importDBQuery.value(1).toString().toStdString();
+            const std::string band=importDBQuery.value(2).toString().toStdString();
+            const int year=importDBQuery.value(3).toInt();
+            const std::string mount=importDBQuery.value(4).toString().toStdString();
+
+            pushElement(new Music(band, mount, name, ref, year));
+
+        }while(importDBQuery.next());
+    }
+    importDBQuery.clear();
+
+    importDBQuery.exec("select * from VG;");
+    if (importDBQuery.first())
+    {
+        do
+        {
+            const std::string ref=importDBQuery.value(0).toString().toStdString();
+            const std::string name=importDBQuery.value(1).toString().toStdString();
+            const std::string console=importDBQuery.value(2).toString().toStdString();
+            const int year=importDBQuery.value(3).toInt();
+            const std::string mount=importDBQuery.value(4).toString().toStdString();
+
+            pushElement(new VideoGame(console, mount, name, ref, year));
+
+        }while(importDBQuery.next());
+    }
+    importDBQuery.clear();
+
+    importDBQuery.exec("select * from EBOOK;");
+    if (importDBQuery.first())
+    {
+        do
+        {
+            const std::string ref=importDBQuery.value(0).toString().toStdString();
+            const std::string name=importDBQuery.value(1).toString().toStdString();
+            const std::string autor=importDBQuery.value(2).toString().toStdString();
+            const int year=importDBQuery.value(3).toInt();
+            const std::string mount=importDBQuery.value(4).toString().toStdString();
+
+            pushElement(new Ebook(autor, mount, name, ref, year));
+
+        }while(importDBQuery.next());
+    }
+    importDBQuery.clear();
+
+    importDBQuery.exec("select * from BOOK;");
+    if (importDBQuery.first())
+    {
+        do
+        {
+            const std::string ref=importDBQuery.value(0).toString().toStdString();
+            const std::string name=importDBQuery.value(1).toString().toStdString();
+            const std::string autor=importDBQuery.value(2).toString().toStdString();
+            const int year=importDBQuery.value(3).toInt();
+            const std::string style=importDBQuery.value(4).toString().toStdString();
+
+            pushElement(new Book(style, autor, name, ref, year));
+
+        }while(importDBQuery.next());
+    }
+    importDBQuery.clear();
+
+    importDBQuery.exec("select * from COMIC;");
+    if (importDBQuery.first())
+    {
+        do
+        {
+            const std::string ref=importDBQuery.value(0).toString().toStdString();
+            const std::string name=importDBQuery.value(1).toString().toStdString();
+            const std::string autor=importDBQuery.value(2).toString().toStdString();
+            const int year=importDBQuery.value(3).toInt();
+
+            pushElement(new Comic(autor, name, ref, year));
+
+        }while(importDBQuery.next());
+    }
+    importDBQuery.clear();
+}
+
+void Library::exportDB()
+{
+    for(unsigned int i=0; i<_docsList.size(); i++)
+    {
+        QSqlQuery exportDBQuery;
+        QString query;
+
+        switch(intTheType(i))
+        {
+        case 2:
+        {
+            const std::string ref=getElement(i)->getRef();
+            const std::string name=getElement(i)->getName();
+            const std::string director=getElement(i)->getDirector();
+            const int year=getElement(i)->getYear();
+            const std::string mount=getElement(i)->getMount();
+            query="insert into FILM values (\"";
+            query+= QString::fromStdString(ref);
+            query+= "\", \"";
+            query+= QString::fromStdString(name);
+            query+= "\", \"";
+            query+= QString::fromStdString(director);
+            query+= "\", ";
+            query+= QString::number(year, 10);
+            query+= ", \"";
+            query+= QString::fromStdString(mount);
+            query+= "\");";
+            exportDBQuery.exec(query);
+        }
+            break;
+        case 6:
+        {
+            const std::string ref=getElement(i)->getRef();
+            const std::string name=getElement(i)->getName();
+            const std::string band=getElement(i)->getBand();
+            const int year=getElement(i)->getYear();
+            const std::string mount=getElement(i)->getMount();
+            query="insert into MUSIC values (\"";
+            query+= QString::fromStdString(ref);
+            query+= "\", \"";
+            query+= QString::fromStdString(name);
+            query+= "\", \"";
+            query+= QString::fromStdString(band);
+            query+= "\", ";
+            query+= QString::number(year, 10);
+            query+= ", \"";
+            query+= QString::fromStdString(mount);
+            query+= "\");";
+            exportDBQuery.exec(query);
+        }
+            break;
+        case 3:
+        {
+            const std::string ref=getElement(i)->getRef();
+            const std::string name=getElement(i)->getName();
+            const std::string console=getElement(i)->getConsole();
+            const int year=getElement(i)->getYear();
+            const std::string mount=getElement(i)->getMount();
+            query="insert into VG values (\"";
+            query+= QString::fromStdString(ref);
+            query+= "\", \"";
+            query+= QString::fromStdString(name);
+            query+= "\", \"";
+            query+= QString::fromStdString(console);
+            query+= "\", ";
+            query+= QString::number(year, 10);
+            query+= ", \"";
+            query+= QString::fromStdString(mount);
+            query+= "\");";
+            exportDBQuery.exec(query);
+        }
+            break;
+        case 5:
+        {
+            const std::string ref=getElement(i)->getRef();
+            const std::string name=getElement(i)->getName();
+            const std::string autor=getElement(i)->getAutor();
+            const int year=getElement(i)->getYear();
+            const std::string mount=getElement(i)->getMount();
+            query="insert into EBOOK values (\"";
+            query+= QString::fromStdString(ref);
+            query+= "\", \"";
+            query+= QString::fromStdString(name);
+            query+= "\", \"";
+            query+= QString::fromStdString(autor);
+            query+= "\", ";
+            query+= QString::number(year, 10);
+            query+= ", \"";
+            query+= QString::fromStdString(mount);
+            query+= "\");";
+            exportDBQuery.exec(query);
+        }
+            break;
+        case 1:
+        {
+            const std::string ref=getElement(i)->getRef();
+            const std::string name=getElement(i)->getName();
+            const std::string autor=getElement(i)->getAutor();
+            const int year=getElement(i)->getYear();
+            query="insert into COMIC values (\"";
+            query+= QString::fromStdString(ref);
+            query+= "\", \"";
+            query+= QString::fromStdString(name);
+            query+= "\", \"";
+            query+= QString::fromStdString(autor);
+            query+= "\", ";
+            query+= QString::number(year, 10);
+            query+= ");";
+            exportDBQuery.exec(query);
+        }
+            break;
+        case 4:
+        {
+            const std::string ref=getElement(i)->getRef();
+            const std::string name=getElement(i)->getName();
+            const std::string autor=getElement(i)->getAutor();
+            const int year=getElement(i)->getYear();
+            const std::string style=getElement(i)->getStyle();
+            query="insert into BOOK values (\"";
+            query+= QString::fromStdString(ref);
+            query+= "\", \"";
+            query+= QString::fromStdString(name);
+            query+= "\", \"";
+            query+= QString::fromStdString(autor);
+            query+= "\", ";
+            query+= QString::number(year, 10);
+            query+= ", \"";
+            query+= QString::fromStdString(style);
+            query+= "\");";
+            exportDBQuery.exec(query);
+        }
+            break;
+        default:
+            std::cout<<"Problem Occured -> Function Library::exportDB() i>6 or i<1"<<std::endl;
+        }
+        exportDBQuery.clear();
+    }
+}
+
+void Library::clearDB()
+{
+    QSqlQuery clearDBQuery;
+
+    clearDBQuery.exec("delete from FILM;");
+    clearDBQuery.clear();
+
+    clearDBQuery.exec("delete from MUSIC;");
+    clearDBQuery.clear();
+
+    clearDBQuery.exec("delete from BOOK;");
+    clearDBQuery.clear();
+
+    clearDBQuery.exec("delete from EBOOK;");
+    clearDBQuery.clear();
+
+    clearDBQuery.exec("delete from VG;");
+    clearDBQuery.clear();
+
+    clearDBQuery.exec("delete from COMIC;");
+    clearDBQuery.clear();
+}
+*/
 unsigned int Library::intTheType(const int & position)
 {
-    if(_docsList[position]->getType()=="Film")
+    if(getElement(position)->getType()=="Film")
     {
         return 2;
     }
     else
     {
-        if(_docsList[position]->getType()=="Musique")
+        if(getElement(position)->getType()=="Musique")
         {
             return 6;
         }
         else
         {
-            if(_docsList[position]->getType()=="Jeux Video")
+            if(getElement(position)->getType()=="Jeux Video")
             {
                 return 3;
             }
             else
             {
-                if(_docsList[position]->getType()=="Livre Numérique")
+                if(getElement(position)->getType()=="Livre Numérique")
                 {
                     return 5;
                 }
                 else
                 {
-                    if(_docsList[position]->getType()=="Bande Dessinée")
+                    if(getElement(position)->getType()=="Bande Dessinée")
                     {
                         return 1;
                     }
                     else
                     {
-                        if(_docsList[position]->getType()=="Livre")
+                        if(getElement(position)->getType()=="Livre")
                         {
                             return 4;
                         }

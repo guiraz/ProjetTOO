@@ -13,6 +13,11 @@ Read::~Read()
 {
 }
 
+std::string Read::getType() const
+{
+    return"";
+}
+
 std::string Read::getAutor() const
 {
     return _autor;
