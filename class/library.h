@@ -3,9 +3,9 @@
 #include<vector>
 #include<iostream>
 #include<fstream>
-/*#include <QtSql>
+#include <QtSql>
 #include <QFile>
-#include<QString>*/
+#include<QString>
 #include "docs.h"
 #include "read.h"
 #include "multimedia.h"
@@ -30,6 +30,7 @@ public:
     Docs* getElement(const int&);
     void pushElement(Docs*);
     void popElement(const int&);
+    unsigned int getSize();
 
     //DISPLAY
     void displayAll();
@@ -50,10 +51,12 @@ public:
     void exportLib2Html();
 
     //DATABASE
-   /* bool connectDB();
+    bool connectDB();
     void importDB();
     void exportDB();
-    void clearDB();*/
+    void clearDB();
+    void exportElementDB(const int&);
+    void clearElementDB(const int&);
 
     //TOOLS
     unsigned int intTheType(const int&);
