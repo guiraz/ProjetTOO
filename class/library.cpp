@@ -611,13 +611,13 @@ unsigned int Library::intTheType(const int & position)
             }
             else
             {
-                if(getElement(position)->getType()=="Livre Numérique")
+                if(getElement(position)->getType()=="Livre Numerique")
                 {
                     return 5;
                 }
                 else
                 {
-                    if(getElement(position)->getType()=="Bande Dessinée")
+                    if(getElement(position)->getType()=="Bande Dessinee")
                     {
                         return 1;
                     }

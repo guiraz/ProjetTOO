@@ -14,7 +14,7 @@ Ebook::~Ebook()
 
 std::string Ebook::getType() const
 {
-    return "Livre Numérique";
+    return "Livre Numerique";
 }
 
 Ebook& Ebook::operator =(const Ebook& eb)

@@ -51,7 +51,6 @@ public:
     void exportLib2Html();
 
     //DATABASE
-    bool connectDB();
     void importDB();
     void exportDB();
     void clearDB();

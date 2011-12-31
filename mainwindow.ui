@@ -39,16 +39,73 @@
      <string>Quitter</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>25</height>
-    </rect>
-   </property>
+   <widget class="QPushButton" name="pushButtonSortName">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>530</y>
+      <width>111</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Trier par nom</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonSortYear">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>530</y>
+      <width>121</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Trier par date</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonSortType">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>530</y>
+      <width>121</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Trier par type</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonRemove">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>120</y>
+      <width>97</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Supprimer</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonHTML">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>150</y>
+      <width>97</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Exporter
+en
+HTML</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
