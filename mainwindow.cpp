@@ -163,3 +163,13 @@ void MainWindow::on_pushButtonHTML_clicked()
 {
     lib->exportLib2Html();
 }
+
+void MainWindow::on_pushButtonAdd_clicked()
+{
+   AddDoc* adddoc=new AddDoc(lib, this);
+   adddoc->show();
+   updateTableWidgetLibrary();
+   ui->pushButtonSortName->setEnabled(true);
+   ui->pushButtonSortType->setEnabled(true);
+   ui->pushButtonSortYear->setEnabled(true);
+}

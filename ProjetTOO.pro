@@ -19,7 +19,8 @@ SOURCES += main.cpp \
     class/comic.cpp \
     class/book.cpp \
     class/library.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    adddoc.cpp
 HEADERS += class/videogame.h \
     class/music.h \
     class/multimedia.h \
@@ -30,8 +31,10 @@ HEADERS += class/videogame.h \
     class/comic.h \
     class/book.h \
     class/library.h \
-    mainwindow.h
+    mainwindow.h \
+    adddoc.h
 +OTHER_FILES += bd/bibli.bd
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    adddoc.ui

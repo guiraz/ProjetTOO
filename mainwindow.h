@@ -7,6 +7,7 @@
  * \version 0.1
  */
 #include "qmainwindow.h"
+#include "adddoc.h"
 #include "class/library.h"
 #include<iostream>
 #include<QFile>
@@ -131,6 +132,12 @@ private slots:
      *  When \a pushButtonHTML is clicked, the method lib->exportLib2Html(); is execute
      */
     void on_pushButtonHTML_clicked();
+    /*!
+     *  \brief \a pushButtonAdd clicked()
+     *
+     *  When \a pushButtonAdd is clicked, the AddDoc window is execute
+     */
+    void on_pushButtonAdd_clicked();
 
 private:
     Ui::MainWindow *ui;/*!< MainWindow's user interface*/
