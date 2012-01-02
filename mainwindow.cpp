@@ -27,6 +27,9 @@ MainWindow::~MainWindow()
     lib->clearDB();
     lib->exportDB();
     closeDatabase();
+    lib->erase();
+    delete lib;
+    delete tableWidgetLibrary;
     delete ui;
 }
 
