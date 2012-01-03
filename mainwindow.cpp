@@ -167,7 +167,7 @@ void MainWindow::on_pushButtonHTML_clicked()
 void MainWindow::on_pushButtonAdd_clicked()
 {
    AddDoc* adddoc=new AddDoc(lib, this);
-   adddoc->show();
+   adddoc->exec();
    updateTableWidgetLibrary();
    ui->pushButtonSortName->setEnabled(true);
    ui->pushButtonSortType->setEnabled(true);
