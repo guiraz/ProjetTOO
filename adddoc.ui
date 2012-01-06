@@ -29,8 +29,8 @@
   <widget class="QComboBox" name="comboBoxType">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>30</y>
+     <x>10</x>
+     <y>40</y>
      <width>96</width>
      <height>41</height>
     </rect>
@@ -74,8 +74,8 @@
   <widget class="QLabel" name="labelName">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>90</y>
+     <x>10</x>
+     <y>120</y>
      <width>85</width>
      <height>27</height>
     </rect>
@@ -87,8 +87,8 @@
   <widget class="QLabel" name="labelYear">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>130</y>
+     <x>10</x>
+     <y>160</y>
      <width>85</width>
      <height>27</height>
     </rect>
@@ -100,8 +100,8 @@
   <widget class="QLabel" name="labelAutor">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>170</y>
+     <x>10</x>
+     <y>190</y>
      <width>85</width>
      <height>27</height>
     </rect>
@@ -113,8 +113,8 @@
   <widget class="QLabel" name="labelMount">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>210</y>
+     <x>10</x>
+     <y>230</y>
      <width>85</width>
      <height>27</height>
     </rect>
@@ -126,8 +126,8 @@
   <widget class="QLabel" name="labelStyle">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>260</y>
+     <x>10</x>
+     <y>270</y>
      <width>85</width>
      <height>27</height>
     </rect>
@@ -139,7 +139,7 @@
   <widget class="QLabel" name="labelDirector">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>310</y>
      <width>101</width>
      <height>27</height>
@@ -152,7 +152,7 @@
   <widget class="QLabel" name="labelBand">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>350</y>
      <width>161</width>
      <height>27</height>
@@ -165,8 +165,8 @@
   <widget class="QLabel" name="labelConsole">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>400</y>
+     <x>10</x>
+     <y>390</y>
      <width>85</width>
      <height>27</height>
     </rect>
@@ -178,9 +178,9 @@
   <widget class="QSpinBox" name="spinBoxYear">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>120</y>
-     <width>58</width>
+     <x>240</x>
+     <y>150</y>
+     <width>331</width>
      <height>37</height>
     </rect>
    </property>
@@ -191,9 +191,9 @@
   <widget class="QLineEdit" name="lineEditName">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>80</y>
-     <width>113</width>
+     <x>230</x>
+     <y>110</y>
+     <width>341</width>
      <height>37</height>
     </rect>
    </property>
@@ -201,9 +201,9 @@
   <widget class="QLineEdit" name="lineEditAutor">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>160</y>
-     <width>113</width>
+     <x>230</x>
+     <y>190</y>
+     <width>341</width>
      <height>37</height>
     </rect>
    </property>
@@ -211,9 +211,9 @@
   <widget class="QLineEdit" name="lineEditMount">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>200</y>
-     <width>113</width>
+     <x>230</x>
+     <y>230</y>
+     <width>341</width>
      <height>37</height>
     </rect>
    </property>
@@ -221,9 +221,9 @@
   <widget class="QLineEdit" name="lineEditStyle">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>250</y>
-     <width>113</width>
+     <x>230</x>
+     <y>270</y>
+     <width>341</width>
      <height>37</height>
     </rect>
    </property>
@@ -231,9 +231,9 @@
   <widget class="QLineEdit" name="lineEditDirector">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>300</y>
-     <width>113</width>
+     <x>232</x>
+     <y>310</y>
+     <width>341</width>
      <height>37</height>
     </rect>
    </property>
@@ -241,9 +241,9 @@
   <widget class="QLineEdit" name="lineEditBand">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>232</x>
      <y>350</y>
-     <width>113</width>
+     <width>341</width>
      <height>37</height>
     </rect>
    </property>
@@ -251,9 +251,9 @@
   <widget class="QLineEdit" name="lineEditConsole">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>232</x>
      <y>390</y>
-     <width>113</width>
+     <width>341</width>
      <height>37</height>
     </rect>
    </property>
