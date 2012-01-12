@@ -1,2 +1,19 @@
-To compil use the MAKEFILE in the class folder!
-Executable is ./test
+Name: ProjetTOO
+
+Autor: Loïc IRLES & Guillaume RAZIMBAUD
+
+Langage: C++
+
+Description: College project for the class of TOO (Oriented Object Technology : in French) wich consist to build a multimedia library by using an oriented object langage (here C++).
+
+Compilation: - Clone the project
+             - He should be placed in a 'ProjetTOO' folder
+             - Open ProjetTOO.pro with QtCreator
+             - Get in the 'Projects' tab
+             - Make sure that in 'Build directory' the address is : '/[tree]/ProjetTOO-buid-desktop' where [tree] is the same then '/[tree]/ProjetTOO' folder!
+               CAUTION : This step is CRUCIAL!!!
+             - Save (Ctrl + Shift + 'S'), Compil (Ctrl + Shift + 'B') and Execute (Ctrl + 'R').
+
+Documentation: The documentation can be generate by Doxygen/Doxywizard!
+
+Regards!
